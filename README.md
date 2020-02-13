@@ -1,2 +1,10 @@
 # Santa-Claus
 Homework for the Computer Programming course @ ACS, UPB 2018
+
+# Algorithm
+
+ In rezolvarea problemei, am definit o structura cu patru campuri, trei campuri de tip char (numele orasului, numele jucariei, caracterul pentru directie) si unul de tip int (care reprezinta numarul de jucarii). Am definit o variabila de tip struct matrice de dimensiuni NM in care am salvat fiecare regiune cu caracteristicile specifice. O alta variabila de tip struct vector in care am retinut caracteristicile unei regiuni la fiecare pas al Mosului. Dupa care, am initializat campurile vectorului la numarul jucariilor cu 0. Verific pentru punctul de start daca exista jucarii.
+   Ma deplasez pe harta, salvand caracteristicile fiecarei regiuni in vector, verificand fiecare directie posibila cu ajutorul unui switch cu patru cazuri (D, U, L, R), atata timp cat avem numar de pasi si nu paraseste Mosul harta. Cu ajutorul functiei <<interior>>, verific daca Mosul paraseste harta, in caz afirmativ, iesim din while si realizam operatiile specifice pentru afisare cadouri, adunate pana in acel moment.
+  In continuare, ordonez orasele in ordine lexicografica din vector la structura, daca au acelasi nume orasele (duplicatele), ordonez dupa jucarii in ordine lexicografica. Dupa ordonare, verific orasele consecutive din vector (ordonate lexicografic) si sterg duplicatele (care contin aceleasi jucarii), salvand datele intr-unul singur. In cazul in care orasele au aceelasi nume, cadourile sunt ordonate descrescător după numărul de apariții. Daca au același număr de apariții, se ordonează lexicografic jucariile. Retinem numarul total de jucari pe care Mosul le-a adunat in parcurgerea numarului de pasi.
+  In cazul in care Mosul paraseste harta, afisam mesajul <<TOO MUCH SNOW !>> si printam la stdout numărul de pași parcurși, numărul de cadouri adunate și ierarhia de cadouri creată până în momentul de față. In celalalt caz, afisam numarul de cadouri adunate si ierarhia cadourilor adunate in parcurgerea numarului de pasi.
+
